@@ -5,13 +5,13 @@ import iphone12b from "./images/iphone-12-half.svg";
 import followIcon from "./images/icon/follow-icon.svg";
 import appleStore from "./images/apple-store.svg";
 import googleStore from "./images/google-store.svg";
-import star from "./images/emoji/star-emoji.svg";
-import moon from "./images/emoji/moon-emoji.svg";
-import smile from "./images/emoji/smile-emoji.svg";
+// import star from "./images/emoji/star-emoji.svg";
+// import moon from "./images/emoji/moon-emoji.svg";
+// import smile from "./images/emoji/smile-emoji.svg";
 
 const App = () => {
   return (
-    <div className='container max-h-screen mx-auto bg-no-repeat '>
+    <div className='container max-h-screen mx-auto overflow-x-hidden bg-no-repeat'>
       <div className='flex flex-col bg-cover xl:px-20 bg-hero-pattern'>
         <header className='flex-1'>
           <nav className='flex items-center justify-between py-5 flex-column'>
