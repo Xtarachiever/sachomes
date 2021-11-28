@@ -24,8 +24,8 @@ const App = () => {
             </div>
           </nav>
           <div className='flex flex-row'>
-            <div className='flex-auto mt-40 mast-left'>
-              <h2 className='max-w-2xl space-x-2 space-y-1 text-3xl font-bold xl:text-5xl lg:text-4xl sm:text-3xl font-brfirma'>
+            <div className='flex-auto mt-48 mast-left'>
+              <h2 className='max-w-2xl py-2 space-x-2 space-y-1 text-3xl font-bold xl:text-5xl lg:text-4xl sm:text-3xl font-brfirma'>
                 We offer <span className='text-sacgreen'>Safe</span>,
                 <span className='text-sacgreen'> Affordable</span> and
                 <span className='text-sacgreen'> Convenient</span> homes for
@@ -48,11 +48,11 @@ const App = () => {
                 </Link>
               </div>
             </div>
-            <div className='flex flex-row mt-10 mast-right'>
+            <div className='flex flex-row mast-right'>
               <img
                 src={iphone12a}
                 alt='sachome app mockup'
-                className='sm:object-scale-down h-4/6'
+                className='mt-12 sm:object-scale-down h-5/6'
               />
               <img
                 src={iphone12b}
