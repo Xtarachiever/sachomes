@@ -11,8 +11,8 @@ import smile from "./images/emoji/smile-emoji.svg";
 
 const App = () => {
   return (
-    <div className='container mx-auto '>
-      <div className='flex flex-col min-h-screen bg-no-repeat bg-cover xl:px-20 bg-hero-pattern'>
+    <div className='container max-h-screen mx-auto bg-no-repeat '>
+      <div className='flex flex-col bg-cover xl:px-20 bg-hero-pattern'>
         <header className='flex-1'>
           <nav className='flex items-center justify-between py-5 flex-column'>
             <h1>SAChomes Logo</h1>
