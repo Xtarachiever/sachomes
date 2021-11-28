@@ -11,47 +11,61 @@ import smile from "./images/emoji/smile-emoji.svg";
 
 const App = () => {
   return (
-    <div className='flex flex-col main-wrapper container relative'>
-      <nav className='p-5 flex justify-between'>
-        <div>sacHomes</div>
-        <div className='flex items-center'>
-          <Link to='/'>
-            <img src={followIcon} className='mr-3 w-6' alt='follow-icon' />
-          </Link>{" "}
-          <span>Follow</span>
-        </div>
-      </nav>
-      <header className='flex-1 flex flex-row p-5 '>
-        <div className='flex-1 flex flex-col'>
-          <h1 className='w-8/12 mb-5'>
-            Proper Design. Smartly Priced. Ready for Move-In!
-          </h1>
-          <div className='flex items-center gap-x-5'>
-            <Link to='/'>
+    <div className='container mx-auto '>
+      <div className='flex flex-col min-h-screen bg-no-repeat bg-cover xl:px-20 bg-hero-pattern'>
+        <header className='flex-1'>
+          <nav className='flex items-center justify-between py-5 flex-column'>
+            <h1>SAChomes Logo</h1>
+            <div className='flex flex-row items-center'>
+              <Link to='/'>
+                <img src={followIcon} alt='follow-icon' className='mr-5 w-7' />
+              </Link>
+              <h2 className='text-xl text-sacblack font-brfirma'>Follow</h2>
+            </div>
+          </nav>
+          <div className='flex flex-row'>
+            <div className='flex-1 mt-40 mast-left'>
+              <h2 className='space-x-2 space-y-1 font-bold xl:text-5xl sm:text-sm lg:text-lg font-brfirma'>
+                We offer <span className='text-sacgreen'>Safe</span>,
+                <span className='text-sacgreen'> Affordable</span> and
+                <span className='text-sacgreen'> Convenient</span> homes for
+                rent to our users.
+              </h2>
+              <div className='flex mt-10'>
+                <Link to='/' className='mr-5'>
+                  <img
+                    src={googleStore}
+                    alt='google-store'
+                    className='object-contain w-full h-12'
+                  />
+                </Link>
+                <Link to='/'>
+                  <img
+                    src={appleStore}
+                    alt='apple-store'
+                    className='object-contain w-full h-12'
+                  />
+                </Link>
+              </div>
+            </div>
+            <div className='flex flex-row flex-1 mast-right'>
               <img
-                src={googleStore}
-                alt='Google store'
-                className='w-40 shadow'
+                src={iphone12a}
+                alt='sachome app mockup'
+                className='object-contain w-full h-5/6'
               />
-            </Link>
-            <Link to='/'>
-              <img src={appleStore} alt='Apple Store' className='w-40 shadow' />
-            </Link>
+              <img
+                src={iphone12b}
+                alt='sachome app mockup'
+                className='object-contain w-full mt-48 -ml-10 h-4/6'
+              />
+            </div>
           </div>
-        </div>
-        <div className='flex'>
-          <img src={iphone12a} alt='' className='w-full' />
-          <img src={iphone12b} alt='' className='w-full -ml-20' />
-        </div>
-      </header>
-      <footer>
-        <div className='flex justify-center py-4'>
-          <p>Copyright 2021 SAChomes</p>
-        </div>
-      </footer>
-      <img src={star} className='w-8 absolute  right-60  top-10' alt='star' />
-      <img src={moon} className='w-8 absolute  right-80  top-40' alt='moon' />
-      <img src={smile} className='w-8 absolute  left-0  top-60' alt='smile' />
+        </header>
+        <footer className='flex-grow-0'>
+          <p className='py-2 text-center'>&copy; Copyright 2021 SAChomes</p>
+        </footer>
+      </div>
     </div>
   );
 };

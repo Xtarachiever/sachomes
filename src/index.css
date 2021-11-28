@@ -2,15 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  margin: 0;
+@font-face {
+  font-family: "brfirma";
+  src: url("./fonts/BR\ Firma\ Medium.otf");
+}
+@font-face {
+  font-family: "brfirma";
+  src: url("./fonts/BR\ Firma\ Bold.otf");
 }
 
-.main-wrapper {
-  min-width: 100vw;
-  min-height: 100vh;
-  background-image: url("./images/Background.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+body {
+  @apply m-0;
 }
