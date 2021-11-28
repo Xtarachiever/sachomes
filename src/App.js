@@ -11,8 +11,8 @@ import googleStore from "./images/google-store.svg";
 
 const App = () => {
   return (
-    <div className='container max-h-screen mx-auto overflow-x-hidden bg-no-repeat'>
-      <div className='flex flex-col bg-cover xl:px-20 bg-hero-pattern'>
+    <div className='max-h-screen mx-auto overflow-x-hidden bg-no-repeat 2xl:container'>
+      <div className='flex flex-col px-10 bg-cover md:px-15 bg-hero-pattern'>
         <header className='flex-1'>
           <nav className='flex items-center justify-between py-5 flex-column'>
             <h1>SAChomes Logo</h1>
@@ -24,8 +24,8 @@ const App = () => {
             </div>
           </nav>
           <div className='flex flex-row'>
-            <div className='flex-1 mt-40 mast-left'>
-              <h2 className='space-x-2 space-y-1 font-bold xl:text-5xl sm:text-sm lg:text-lg font-brfirma'>
+            <div className='flex-auto mt-40 mast-left'>
+              <h2 className='max-w-2xl space-x-2 space-y-1 text-3xl font-bold xl:text-5xl lg:text-4xl sm:text-3xl font-brfirma'>
                 We offer <span className='text-sacgreen'>Safe</span>,
                 <span className='text-sacgreen'> Affordable</span> and
                 <span className='text-sacgreen'> Convenient</span> homes for
@@ -48,16 +48,16 @@ const App = () => {
                 </Link>
               </div>
             </div>
-            <div className='flex flex-row flex-1 mast-right'>
+            <div className='flex flex-row mt-10 mast-right'>
               <img
                 src={iphone12a}
                 alt='sachome app mockup'
-                className='object-contain w-full h-5/6'
+                className='sm:object-scale-down h-4/6'
               />
               <img
                 src={iphone12b}
                 alt='sachome app mockup'
-                className='object-contain w-full mt-48 -ml-10 h-4/6'
+                className='mt-64 -ml-24 sm:object-scale-down h-4/6'
               />
             </div>
           </div>
