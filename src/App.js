@@ -34,10 +34,10 @@ const App = () => {
               </h2>
               <div className='flex mt-10'>
                 <Link to='/' className='mr-5'>
-                  <img src={googleStore} alt='google-store' className='h-12' />
+                  <img src={googleStore} alt='google-store' className='' />
                 </Link>
                 <Link to='/'>
-                  <img src={appleStore} alt='apple-store' className='h-12' />
+                  <img src={appleStore} alt='apple-store' className='' />
                 </Link>
               </div>
             </div>
