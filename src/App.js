@@ -24,8 +24,8 @@ const App = () => {
               <h2 className='text-xl text-sacblack font-brfirma'>Follow</h2>
             </div>
           </nav>
-          <div className='flex flex-col md:flex-row'>
-            <div className='flex-col flex-1 py-28 mast-left'>
+          <div className='flex flex-col lg:flex-row'>
+            <div className='flex flex-col items-center flex-1 jus py-28 mast-left'>
               <h2 className='max-w-2xl py-2 space-x-2 space-y-1 text-2xl font-bold sm:text-3xl md:text-5xl font-brfirma'>
                 We offer <span className='text-sacgreen'>Safe</span>,
                 <span className='text-sacgreen'> Affordable</span> and
@@ -41,7 +41,7 @@ const App = () => {
                 </Link>
               </div>
             </div>
-            <div className='flex mast-right'>
+            <div className='flex items-center justify-center flex-1 mast-right'>
               <img
                 src={phonepack}
                 alt='sachome app mockup'
