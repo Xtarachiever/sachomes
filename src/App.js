@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import iphone12a from "./images/iphone-12-full.svg";
-import iphone12b from "./images/iphone-12-half.svg";
+// import iphone12a from "./images/iphone-12-full.svg";
+// import iphone12b from "./images/iphone-12-half.svg";
+import phonepack from "./images/phone-pack.svg";
 import followIcon from "./images/icon/follow-icon.svg";
 import appleStore from "./images/apple-store.svg";
 import googleStore from "./images/google-store.svg";
@@ -23,8 +24,8 @@ const App = () => {
               <h2 className='text-xl text-sacblack font-brfirma'>Follow</h2>
             </div>
           </nav>
-          <div className='flex flex-row'>
-            <div className='flex-auto mt-48 mast-left'>
+          <div className='flex flex-col sm:flex-row'>
+            <div className='flex flex-col py-28 mast-left'>
               <h2 className='max-w-2xl py-2 space-x-2 space-y-1 text-3xl font-bold xl:text-5xl lg:text-4xl sm:text-3xl font-brfirma'>
                 We offer <span className='text-sacgreen'>Safe</span>,
                 <span className='text-sacgreen'> Affordable</span> and
@@ -33,37 +34,26 @@ const App = () => {
               </h2>
               <div className='flex mt-10'>
                 <Link to='/' className='mr-5'>
-                  <img
-                    src={googleStore}
-                    alt='google-store'
-                    className='object-contain w-full h-12'
-                  />
+                  <img src={googleStore} alt='google-store' className='h-12' />
                 </Link>
                 <Link to='/'>
-                  <img
-                    src={appleStore}
-                    alt='apple-store'
-                    className='object-contain w-full h-12'
-                  />
+                  <img src={appleStore} alt='apple-store' className='h-12' />
                 </Link>
               </div>
             </div>
-            <div className='flex flex-row mast-right'>
+            <div className='flex mast-right'>
               <img
-                src={iphone12a}
+                src={phonepack}
                 alt='sachome app mockup'
-                className='mt-12 sm:object-scale-down h-5/6'
-              />
-              <img
-                src={iphone12b}
-                alt='sachome app mockup'
-                className='mt-64 -ml-24 sm:object-scale-down h-4/6'
+                className='-mt-20 sm:mt-0 sm:object-scale-down h-6/6'
               />
             </div>
           </div>
         </header>
         <footer className='flex-grow-0'>
-          <p className='py-2 text-center'>&copy; Copyright 2021 SAChomes</p>
+          <p className='py-2 mt-10 text-center sm:mt-0'>
+            &copy; Copyright 2021 SAChomes
+          </p>
         </footer>
       </div>
     </div>
