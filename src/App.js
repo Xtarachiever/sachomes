@@ -24,9 +24,9 @@ const App = () => {
               <h2 className='text-xl text-sacblack font-brfirma'>Follow</h2>
             </div>
           </nav>
-          <div className='flex flex-col sm:flex-row'>
-            <div className='flex flex-col py-28 mast-left'>
-              <h2 className='max-w-2xl py-2 space-x-2 space-y-1 text-3xl font-bold xl:text-5xl lg:text-4xl sm:text-3xl font-brfirma'>
+          <div className='flex flex-col md:flex-row'>
+            <div className='flex-col flex-1 py-28 mast-left'>
+              <h2 className='max-w-2xl py-2 space-x-2 space-y-1 text-2xl font-bold md:text-5xl font-brfirma'>
                 We offer <span className='text-sacgreen'>Safe</span>,
                 <span className='text-sacgreen'> Affordable</span> and
                 <span className='text-sacgreen'> Convenient</span> homes for
@@ -51,7 +51,7 @@ const App = () => {
           </div>
         </header>
         <footer className='flex-grow-0'>
-          <p className='py-2 mt-10 text-center sm:mt-0'>
+          <p className='py-2 mt-10 text-center md:mt-0'>
             &copy; Copyright 2021 SAChomes
           </p>
         </footer>
