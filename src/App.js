@@ -26,7 +26,7 @@ const App = () => {
           </nav>
           <div className='flex flex-col md:flex-row'>
             <div className='flex-col flex-1 py-28 mast-left'>
-              <h2 className='max-w-2xl py-2 space-x-2 space-y-1 text-2xl font-bold md:text-5xl font-brfirma'>
+              <h2 className='max-w-2xl py-2 space-x-2 space-y-1 text-2xl font-bold sm:text-3xl md:text-5xl font-brfirma'>
                 We offer <span className='text-sacgreen'>Safe</span>,
                 <span className='text-sacgreen'> Affordable</span> and
                 <span className='text-sacgreen'> Convenient</span> homes for
