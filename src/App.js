@@ -31,7 +31,7 @@ const App = () => {
               </div>
             </nav>
             <div className='flex flex-col lg:flex-row'>
-              <div className='flex flex-col items-center flex-1 md:items-start py-28 mast-left'>
+              <div className='flex flex-col items-center flex-1 lg:items-start py-28 mast-left'>
                 <h2 className='max-w-2xl py-2 space-x-2 space-y-1 text-2xl font-bold sm:text-3xl md:text-5xl font-brfirma animate__animated animate__fadeIn animate__slow 2s'>
                   We offer <span className='text-sacgreen '>Safe</span>,
                   <span className='text-sacgreen'> Affordable</span> and
