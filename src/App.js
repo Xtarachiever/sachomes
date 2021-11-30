@@ -14,7 +14,7 @@ import "animate.css";
 const App = () => {
   return (
     <div className='max-h-screen mx-auto overflow-x-hidden bg-no-repeat 2xl:container'>
-      <div className='flex flex-col px-10 bg-cover md:px-15 bg-hero-pattern'>
+      <div className='flex flex-col px-10 sm:bg-cover md:px-15 bg-hero-pattern'>
         <header className='flex-1'>
           <nav className='flex items-center justify-between py-5 flex-column'>
             <h1>SAChomes Logo</h1>
@@ -26,7 +26,7 @@ const App = () => {
             </div>
           </nav>
           <div className='flex flex-col lg:flex-row'>
-            <div className='flex flex-col items-center flex-1 jus py-28 mast-left'>
+            <div className='flex flex-col flex-1 jus py-28 mast-left'>
               <h2 className='max-w-2xl py-2 space-x-2 space-y-1 text-2xl font-bold sm:text-3xl md:text-5xl font-brfirma animate__animated animate__fadeIn animate__slow 2s'>
                 We offer <span className='text-sacgreen '>Safe</span>,
                 <span className='text-sacgreen'> Affordable</span> and
@@ -46,7 +46,7 @@ const App = () => {
               <img
                 src={phonepack}
                 alt='sachome app mockup'
-                className='-mt-20 sm:mt-0 sm:object-scale-down h-6/6 animate__animated animate__bounceInUp animate__delay-2s'
+                className='-mt-20 sm:mt-0 sm:object-scale-down h-6/6 animate__animated animate__bounceInUp animate__delay-2s animate__slow 2s '
               />
             </div>
           </div>
