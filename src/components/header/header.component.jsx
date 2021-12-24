@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import 'animate.css';
 import './header.style.css';
 import Logo from '../../images/logo.svg';
 import followIcon from '../../images/icon/follow-icon.svg';
@@ -40,7 +40,11 @@ export const Header = () => {
           </div>
         </div>
         <div className='flex-1 '>
-          <img src={phonePack} alt='AppleStore' className='h-15' />
+          <img
+            src={phonePack}
+            alt='AppleStore'
+            className='h-15 animate__animated animate__bounceInUp animate__delay-2s animate__slow 2s '
+          />
         </div>
       </header>
     </div>
