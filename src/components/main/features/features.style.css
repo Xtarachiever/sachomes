@@ -1,0 +1,47 @@
+.features-section {
+  min-height: 771px;
+  background: rgba(137, 59, 0, 0.04);
+}
+.download-icon {
+  background: #ffffff;
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.06);
+  border-radius: 10px;
+}
+
+.slide-header {
+  font-family: 'brfirma';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 38px;
+  color: #001833;
+}
+
+.slide-text {
+  font-style: normal;
+  font-weight: normal;
+  line-height: 24px;
+  color: #7e838e;
+}
+
+.slide-number {
+  font-family: 'brfirma';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  background: linear-gradient(
+    108.44deg,
+    #004e89 10.47%,
+    #006ec2 48.29%,
+    #008ffc 89.53%
+  );
+}
+
+.feature-slides {
+  min-height: 771px;
+}
+
+.slide-container {
+  max-height: 771px;
+}

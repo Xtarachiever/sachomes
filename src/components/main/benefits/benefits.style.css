@@ -1,0 +1,14 @@
+.benefits {
+  min-height: 771px;
+  background-color: white;
+}
+
+.benfits-download-button {
+  background: linear-gradient(
+    108.44deg,
+    #004e89 10.47%,
+    #006ec2 48.29%,
+    #008ffc 89.53%
+  );
+  border-radius: 10px;
+}

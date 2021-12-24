@@ -3,12 +3,22 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "brfirma";
-  src: url("./fonts/BR\ Firma\ Medium.otf");
+  font-family: 'brfirma';
+  src: url('./fonts/BR\ Firma\ Medium.otf');
 }
 @font-face {
-  font-family: "brfirma";
-  src: url("./fonts/BR\ Firma\ Bold.otf");
+  font-family: 'brfirma';
+  src: url('./fonts/BR\ Firma\ Bold.otf');
+}
+
+@font-face {
+  font-family: 'brfirmalight';
+  src: url('./fonts//BR\ Firma\ Extra\ Light.otf');
+}
+
+@font-face {
+  font-family: 'brfirmaregular';
+  src: url('./fonts/BR\ Firma\ Regular.otf');
 }
 
 body {
