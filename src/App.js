@@ -8,10 +8,6 @@ import { Footer } from './components/footer/footer.component';
 import { Apartments } from './components/main/apartments/apartments.component';
 // const Header = lazy(() => import('./components/header/header.component'));
 
-// import star from "./images/emoji/star-emoji.svg";
-// import moon from "./images/emoji/moon-emoji.svg";
-// import smile from "./images/emoji/smile-emoji.svg";
-
 const App = () => {
   return (
     <div>
