@@ -9,10 +9,10 @@
 }
 
 .slide-header {
-  font-family: 'brfirma';
+  font-family: 'brfirmaregular';
   font-style: normal;
   font-weight: normal;
-  font-size: 30px;
+  font-size: 28px;
   line-height: 38px;
   color: #001833;
 }
@@ -25,7 +25,7 @@
 }
 
 .slide-number {
-  font-family: 'brfirma';
+  font-family: 'brfirmaregular';
   font-style: normal;
   font-weight: bold;
   font-size: 24px;

@@ -15,7 +15,7 @@ export const Apartments = () => {
         <div className='my-12 text-center'>
           <Title>Some of our Apartments...</Title>
         </div>
-        <div className='grid grid-cols-3 gap-4 gird'>
+        <div className='grid grid-cols-2 gap-4 p-5 sm:grid-cols-3'>
           <div className='overflow-hidden'>
             <img src={project1} alt='appartment' />
           </div>

@@ -9,8 +9,6 @@ html {
 
 body {
   font-family: 'brfirmaregular';
-  font-style: normal;
-  font-weight: normal;
   line-height: 32px;
   font-size: 16px;
 }
@@ -23,4 +21,11 @@ body {
   line-height: 45px;
   text-transform: capitalize;
   color: #001833;
+}
+
+@media (max-width: 1024px) {
+  .title {
+    font-weight: 600;
+    font-size: 28px;
+  }
 }

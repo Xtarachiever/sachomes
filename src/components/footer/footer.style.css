@@ -1,3 +1,6 @@
+.footer-wrapper {
+  font-family: 'brfirmalight' !important;
+}
 footer {
   color: white;
   min-height: 280px;

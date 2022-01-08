@@ -8,20 +8,24 @@ export const Benefits = () => {
   return (
     <div className='flex items-center benefits'>
       <div className='container w-full mx-auto'>
-        <div className='flex flex-row justify-between'>
-          <div className='flex-1'>
-            <img src={benefitImages} alt='benefitImages' />
+        <div className='flex flex-col-reverse gap-0 py-20 lg:py-0 lg:flex-row lg:items-center lg:justify-between lg:flex'>
+          <div className=''>
+            <img
+              src={benefitImages}
+              alt='benefitImages'
+              className='block p-5 mx-auto'
+            />
           </div>
-          <div className='flex-1 gap-y-5'>
+          <div className='flex-1 px-10 mb-10 text-center lg:mb-0 gap-y-5 lg:text-left'>
             <Title>Benefits</Title>
-            <div className='mb-5'>
+            <div className='mb-5 text-justify'>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et quis
               eget varius quis adipiscing. Vitae sem sit est enim, proin.
               Habitasse varius convallis mauris ornare egestas adipiscing felis.
               Habitant porta sagittis facilisis ut lacus condimentum fermentum.
               Sed pellentesque volutpat elit et sagittis ultrices ut.
             </div>
-            <ul className='mb-10 ml-10 list-disc list'>
+            <ul className='mb-10 ml-10 text-left list-disc list'>
               <li>Few clicks away from renting your dream apartment</li>
               <li>We provide affordable apartments within your budget</li>
               <li>Worry no more about fraudulent agents and extra charges</li>
