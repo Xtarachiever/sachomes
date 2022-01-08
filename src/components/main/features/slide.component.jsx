@@ -5,7 +5,7 @@ import AppleStore from '../../../images/icon/transparent-apple-store-download-ic
 
 export const Slide = ({ number, title, content, image }) => {
   return (
-    <div className='container flex flex-col justify-center w-full px-5 mx-auto text-left lg:justify-between lg:items-center lg:flex-row lg:px-0 feature-slides'>
+    <div className='container flex flex-col justify-between w-full px-5 mx-auto text-left lg:items-center lg:flex-row lg:px-0 feature-slides'>
       <div className='flex flex-1'>
         <div>
           <span className='p-2 mr-8 text-white rounded-full slide-number'>
@@ -16,7 +16,7 @@ export const Slide = ({ number, title, content, image }) => {
         <div className='flex flex-col gap-y-10'>
           <h3 className='slide-header'>{title}</h3>
           <p className=' slide-text lg:w-8/12'>{content}</p>
-          <div className='flex hidden mt-10 space-x-10 slide-download-icon lg:block'>
+          <div className='flex mt-10 space-x-10 slide-download-icon'>
             <Link to='/' className='px-10 py-6 download-icon'>
               <img src={googlePlay} alt='google Play' className='h-15' />
             </Link>
