@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router } from 'react-router-dom';
-import Logo from './images/logo/sachomes-white-logo.svg';
+//import Logo from './images/logo/sachomes-white-logo.svg';
 
 const App = lazy(() => import('./App'));
 
