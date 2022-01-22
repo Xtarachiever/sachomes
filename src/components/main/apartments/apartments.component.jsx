@@ -8,7 +8,7 @@ import project4 from '../../../images/Project Cover 4.svg';
 import project5 from '../../../images/Project Cover 5.svg';
 import project6 from '../../../images/Project Cover 6.svg';
 
-export const Apartments = () => {
+const Apartments = () => {
   return (
     <div className='flex flex-row items-center justify-center mb-20 apartments'>
       <div>
@@ -39,3 +39,5 @@ export const Apartments = () => {
     </div>
   );
 };
+
+export default Apartments;

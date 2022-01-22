@@ -6,7 +6,7 @@ import feature1 from '../../../images/iphone-12--black.png';
 import feature2 from '../../../images/feature-2-iphone-12.png';
 import feature3 from '../../../images/feature-3-iphone-12.png';
 
-export const Features = () => {
+const Features = () => {
   return (
     <div
       className='flex items-center justify-center features-section'
@@ -40,3 +40,5 @@ export const Features = () => {
     </div>
   );
 };
+
+export default Features;

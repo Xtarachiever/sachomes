@@ -8,7 +8,7 @@ import AppleStore from '../../images/apple-store.svg';
 import googlePlay from '../../images/google-store.svg';
 import phonePack from '../../images/phone-pack.svg';
 
-export const Header = () => {
+const Header = () => {
   return (
     <div className='h-full pt-5 bg-no-repeat bg-cover header-section bg-hero-pattern'>
       <nav className='container flex items-center justify-between w-full px-5 mx-auto lg:px-0'>
@@ -50,3 +50,5 @@ export const Header = () => {
     </div>
   );
 };
+
+export default Header;

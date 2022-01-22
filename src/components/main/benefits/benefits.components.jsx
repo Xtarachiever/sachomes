@@ -4,7 +4,7 @@ import { Title } from '../../Title';
 import benefitImages from '../../../images/benefits-image.svg';
 import './benefits.style.css';
 
-export const Benefits = () => {
+const Benefits = () => {
   return (
     <div className='flex items-center benefits'>
       <div className='container w-full mx-auto'>
@@ -41,3 +41,5 @@ export const Benefits = () => {
     </div>
   );
 };
+
+export default Benefits;

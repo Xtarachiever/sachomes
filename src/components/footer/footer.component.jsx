@@ -5,7 +5,7 @@ import sachomesWhiteLogo from '../../images/logo/sachomes-white-logo.svg';
 import googlePlay from '../../images/icon/footer-google-play.svg';
 import AppleStore from '../../images/icon/footer-apple-store.svg';
 
-export const Footer = () => {
+const Footer = () => {
   return (
     <div className='bg-sachomesblue footer-wrapper'>
       <footer className='flex items-center px-2 py-5 footer'>
@@ -47,3 +47,5 @@ export const Footer = () => {
     </div>
   );
 };
+
+export default Footer;
