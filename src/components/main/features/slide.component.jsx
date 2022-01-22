@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Zoom from 'react-reveal/Zoom';
+import Fade from 'react-reveal/Fade';
 import googlePlay from '../../../images/icon/transparent-google-play-download-icon.svg';
 import AppleStore from '../../../images/icon/transparent-apple-store-download-icon.svg';
 
@@ -14,20 +16,25 @@ export const Slide = ({ number, title, content, image }) => {
         </div>
 
         <div className='flex flex-col gap-y-10'>
-          <h3 className='slide-header'>{title}</h3>
-          <p className=' slide-text lg:w-8/12'>{content}</p>
-          <div className='flex mt-10 space-x-10 slide-download-icon'>
-            <Link to='/' className='px-10 py-6 download-icon'>
-              <img src={googlePlay} alt='google Play' className='h-15' />
-            </Link>
-            <Link to='/' className='px-10 py-6 download-icon'>
-              <img src={AppleStore} alt='AppleStore' className=' h-15' />
-            </Link>
-          </div>
+          <Fade effect='fadeInUp'>
+            <h3 className='slide-header'>{title}</h3>
+            <p className=' slide-text lg:w-8/12'>{content}</p>
+            <div className='flex mt-10 space-x-10 slide-download-icon'>
+              <Link to='/' className='px-10 py-6 download-icon'>
+                <img src={googlePlay} alt='google Play' className='h-15' />
+              </Link>
+
+              <Link to='/' className='px-10 py-6 download-icon'>
+                <img src={AppleStore} alt='AppleStore' className=' h-15' />
+              </Link>
+            </div>
+          </Fade>
         </div>
       </div>
       <div className=''>
-        <img src={image} alt='iphone-12--black' className='block mr-0 h-15' />
+        <Zoom>
+          <img src={image} alt='iphone-12--black' className='block mr-0 h-15' />
+        </Zoom>
       </div>
     </div>
   );

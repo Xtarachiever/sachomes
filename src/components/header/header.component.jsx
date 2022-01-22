@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Zoom from 'react-reveal/Zoom';
 import 'animate.css';
 import './header.style.css';
 import Logo from '../../images/logo.svg';
@@ -7,19 +8,36 @@ import followIcon from '../../images/icon/follow-icon.svg';
 import AppleStore from '../../images/apple-store.svg';
 import googlePlay from '../../images/google-store.svg';
 import phonePack from '../../images/phone-pack.svg';
+import smile from '../../images/emoji/smile-emoji.svg';
+
+import Social from './Social.component';
 
 const Header = () => {
+  const [visibilty, changeVisibility] = useState(false);
+  const handleLogoClick = () => {
+    changeVisibility(!visibilty);
+  };
   return (
-    <div className='h-full pt-5 bg-no-repeat bg-cover header-section bg-hero-pattern'>
+    <div className='relative h-full pt-5 bg-no-repeat bg-cover header-section bg-hero-pattern '>
       <nav className='container flex items-center justify-between w-full px-5 mx-auto lg:px-0'>
         <div>
           <img src={Logo} alt='logo' className='h-20' />
         </div>
         <div className='flex items-center gap-x-5'>
-          <img src={followIcon} alt='logo' className='h-8 cursor-pointer' />
+          <div className='relative'>
+            <img
+              src={followIcon}
+              alt='logo'
+              className='h-8 cursor-pointer'
+              onClick={() => handleLogoClick()}
+            />
+            {visibilty ? <Social /> : ''}
+          </div>
           <p>Follow</p>
         </div>
       </nav>
+      <img src={smile} alt='logo' className='absolute h-12 mt-5 left-5' />
+
       <header className='container flex flex-col px-5 mx-auto lg:flex-row lg:px-0'>
         <div className='flex flex-col flex-1 mt-20 gap-y-8'>
           <div className='w-12/12'>
@@ -40,11 +58,13 @@ const Header = () => {
           </div>
         </div>
         <div className='flex items-center flex-1 '>
-          <img
-            src={phonePack}
-            alt='AppleStore'
-            className='w-full h-full mt-20 lg:mt-0 animate__animated animate__fadeIn animate__delay-2s animate__slow 2s '
-          />
+          <Zoom>
+            <img
+              src={phonePack}
+              alt='AppleStore'
+              className='w-full h-full mt-20 lg:mt-0 '
+            />
+          </Zoom>
         </div>
       </header>
     </div>

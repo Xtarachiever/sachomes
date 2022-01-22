@@ -1,4 +1,5 @@
 import React from 'react';
+import Rotate from 'react-reveal/Rotate';
 import './apartments.style.css';
 import { Title } from '../../Title';
 import project1 from '../../../images/Project Cover 1.svg';
@@ -16,24 +17,26 @@ const Apartments = () => {
           <Title>Some of our Apartments...</Title>
         </div>
         <div className='grid grid-cols-2 gap-4 p-5 sm:grid-cols-3'>
-          <div className='overflow-hidden'>
-            <img src={project1} alt='appartment' />
-          </div>
-          <div className='overflow-hidden'>
-            <img src={project2} alt='appartment' />
-          </div>
-          <div className='overflow-hidden'>
-            <img src={project3} alt='appartment' />
-          </div>
-          <div className='overflow-hidden'>
-            <img src={project4} alt='appartment' />
-          </div>
-          <div className='overflow-hidden'>
-            <img src={project5} alt='appartment' />
-          </div>
-          <div className='overflow-hidden'>
-            <img src={project6} alt='appartment' />
-          </div>
+          <Rotate top left>
+            <div className='overflow-hidden'>
+              <img src={project1} alt='appartment' />
+            </div>
+            <div className='overflow-hidden'>
+              <img src={project2} alt='appartment' />
+            </div>
+            <div className='overflow-hidden'>
+              <img src={project3} alt='appartment' />
+            </div>
+            <div className='overflow-hidden'>
+              <img src={project4} alt='appartment' />
+            </div>
+            <div className='overflow-hidden'>
+              <img src={project5} alt='appartment' />
+            </div>
+            <div className='overflow-hidden'>
+              <img src={project6} alt='appartment' />
+            </div>
+          </Rotate>
         </div>
       </div>
     </div>
