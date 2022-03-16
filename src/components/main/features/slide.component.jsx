@@ -1,22 +1,21 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Zoom from 'react-reveal/Zoom';
-import Fade from 'react-reveal/Fade';
+
 import googlePlay from '../../../images/icon/transparent-google-play-download-icon.svg';
 import AppleStore from '../../../images/icon/transparent-apple-store-download-icon.svg';
 
-export const Slide = ({ number, title, content, image }) => {
+export const SlideContent = ({ number, title, content, image }) => {
   return (
-    <div className='container flex flex-col justify-between w-full px-5 mx-auto text-left lg:items-center lg:flex-row lg:px-0 feature-slides'>
-      <div className='flex flex-1'>
-        <div>
-          <span className='p-2 mr-8 text-white rounded-full slide-number'>
-            {number}
-          </span>
-        </div>
+    <>
+      <div className='container flex flex-col justify-between w-full px-5 mx-auto text-left lg:items-center lg:flex-row lg:px-0 feature-slides'>
+        <div className='flex flex-1'>
+          <div>
+            <span className='p-2 mr-8 text-white rounded-full slide-number'>
+              {number}
+            </span>
+          </div>
 
-        <div className='flex flex-col gap-y-10'>
-          <Fade effect='fadeInUp'>
+          <div className='flex flex-col gap-y-10'>
             <h3 className='slide-header'>{title}</h3>
             <p className=' slide-text lg:w-8/12'>{content}</p>
             <div className='flex mt-10 space-x-10 slide-download-icon'>
@@ -28,14 +27,12 @@ export const Slide = ({ number, title, content, image }) => {
                 <img src={AppleStore} alt='AppleStore' className=' h-15' />
               </Link>
             </div>
-          </Fade>
+          </div>
+        </div>
+        <div className=''>
+          <img src={image} alt='iphone-12--black' className='block mr-0 h-15' />
         </div>
       </div>
-      <div className=''>
-        <Zoom>
-          <img src={image} alt='iphone-12--black' className='block mr-0 h-15' />
-        </Zoom>
-      </div>
-    </div>
+    </>
   );
 };

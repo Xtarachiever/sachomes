@@ -8,7 +8,7 @@ import AppleStore from '../../images/icon/footer-apple-store.svg';
 const Footer = () => {
   return (
     <div className='bg-sachomesblue footer-wrapper'>
-      <footer className='flex items-center px-2 py-5 footer'>
+      <footer className='flex items-center px-5 py-5 footer lg:px-10'>
         <div className='container flex flex-row justify-between w-full mx-auto lg:items-center'>
           <div className='flex flex-col h-full gap-y-4'>
             <div className='mb-5'>

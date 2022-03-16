@@ -1,72 +1,98 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import Zoom from 'react-reveal/Zoom';
 import 'animate.css';
 import './header.style.css';
 import Logo from '../../images/logo.svg';
-import followIcon from '../../images/icon/follow-icon.svg';
-import AppleStore from '../../images/apple-store.svg';
-import googlePlay from '../../images/google-store.svg';
+import Follow from '../Follow';
+import AppleStore from '../../images/get-on-apple.png';
+import googlePlay from '../../images/get-on-google.png';
 import phonePack from '../../images/phone-pack.svg';
 import smile from '../../images/emoji/smile-emoji.svg';
+import star from '../../images/emoji/star-emoji.svg';
 
 import Social from './Social.component';
 
 const Header = () => {
-  const [visibilty, changeVisibility] = useState(false);
+  const [visibilty, changeVisibility] = useState(true);
   const handleLogoClick = () => {
     changeVisibility(!visibilty);
   };
   return (
-    <div className='relative h-full pt-5 bg-no-repeat bg-cover header-section bg-hero-pattern '>
-      <nav className='container flex items-center justify-between w-full px-5 mx-auto lg:px-0'>
-        <div>
-          <img src={Logo} alt='logo' className='h-20' />
-        </div>
-        <div className='flex items-center gap-x-5'>
-          <div className='relative'>
-            <img
-              src={followIcon}
-              alt='logo'
-              className='h-8 cursor-pointer'
-              onClick={() => handleLogoClick()}
-            />
-            {visibilty ? <Social /> : ''}
+    <div className='pt-3 bg-no-repeat bg-cover header-section bg-hero-pattern'>
+      <div className='container px-5 mx-auto lg:px-10'>
+        <nav className='flex items-center justify-between w-full'>
+          <div className=''>
+            <img src={Logo} alt='logo' className='sm:h-full h-4/6' />
           </div>
-          <p>Follow</p>
+          <div className='flex items-center gap-x-5'>
+            <div className='relative' onClick={() => handleLogoClick()}>
+              <Follow />
+              {visibilty && <Social />}
+            </div>
+            <p>Follow</p>
+          </div>
+        </nav>
+        <div className='relative'>
+          <img
+            src={smile}
+            alt='smile-emoji'
+            className='absolute h-8 mt-5 sm:h-12 left-5 animate-pulse '
+          />
+          <img
+            src={star}
+            alt='star'
+            className='absolute h-8 mt-5 top-20 sm:-top-20 right-5 sm:right-72 sm:h-12 animate-spin'
+          />
         </div>
-      </nav>
-      <img src={smile} alt='logo' className='absolute h-12 mt-5 left-5' />
 
-      <header className='container flex flex-col px-5 mx-auto lg:flex-row lg:px-0'>
-        <div className='flex flex-col flex-1 mt-20 gap-y-8'>
-          <div className='w-12/12'>
-            <h1 className='text-3xl lg:text-5xl'>
-              We offer <span className='text-sacblue'>Safe</span>,
-              <span className='text-sacblue'> Affordable</span> and
-              <span className='text-sacblue'> Convenient</span> homes for
-              <span className='text-sacbrown'> rent</span> to our users.
-            </h1>
+        <header className='grid grid-cols-1 sm:grid-cols-2'>
+          <div className='flex items-center mt-36 sm:-mt-64'>
+            <div className='space-y-16'>
+              <div
+                className=''
+                data-aos='fade-up'
+                data-aos-delay='50'
+                data-aos-duration='1000'>
+                <h1 className='text-2xl font-bold md:text-3xl lg:text-5xl word-space'>
+                  We offer <span className='text-sacblue'>Safe</span>,
+                  <span className='text-sacblue'> Affordable</span> and
+                  <span className='text-sacblue'> Convenient</span> homes for
+                  <span className='text-sacbrown'> rent</span> to our users.
+                </h1>
+              </div>
+              <div
+                className='flex sm:px-5 lg:px-0 mt-14 space-x-7 lg:space-x-11 '
+                data-aos='fade-up'
+                data-aos-delay='300'
+                data-aos-duration='800'>
+                <button className='px-5 bg-black py-2overflow-hidden sm:w-60 rounded-xl'>
+                  <img
+                    className='object-cover'
+                    src={googlePlay}
+                    alt='get on playstore'
+                  />
+                </button>
+                <button className='px-5 py-3 overflow-hidden bg-black sm:w-60 rounded-xl'>
+                  <img
+                    className='object-cover '
+                    src={AppleStore}
+                    alt='get on playstore'
+                  />
+                </button>
+              </div>
+            </div>
           </div>
-          <div className='flex flex-row space-x-4 lg:space-x-12 '>
-            <Link to='/' className='header-download-icon'>
-              <img src={googlePlay} alt='google Play' className='h-15' />
-            </Link>
-            <Link to='/' className='header-download-icon'>
-              <img src={AppleStore} alt='AppleStore' className='h-15' />
-            </Link>
-          </div>
-        </div>
-        <div className='flex items-center flex-1 '>
-          <Zoom>
+          <div className='flex items-center justify-center mt-10 sm:mt-0'>
             <img
               src={phonePack}
               alt='AppleStore'
-              className='w-full h-full mt-20 lg:mt-0 '
+              className='w-full :mt-0 '
+              data-aos='zoom-in'
+              data-aos-delay='50'
+              data-aos-duration='1000'
             />
-          </Zoom>
-        </div>
-      </header>
+          </div>
+        </header>
+      </div>
     </div>
   );
 };
