@@ -9,7 +9,7 @@ export const SlideContent = ({ number, title, content, image }) => {
     <>
       <div className='container flex flex-col justify-between w-full px-5 mx-auto text-left lg:items-center lg:flex-row lg:px-0 feature-slides'>
         <div className='flex flex-1'>
-          <div>
+          <div className="mt-3">
             <span className='p-2 mr-8 text-white rounded-full slide-number'>
               {number}
             </span>

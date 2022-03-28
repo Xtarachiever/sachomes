@@ -58,8 +58,10 @@ const Features = () => {
                   />
                 </Slide>
               </Slider>
-              <ButtonBack>Back</ButtonBack>
-              <ButtonNext>Next</ButtonNext>
+              <button className='flex justify-between w-full'>
+               <ButtonBack>Back</ButtonBack>
+               <ButtonNext>Next</ButtonNext>
+              </button>
             </CarouselProvider>
           </div>
         </div>

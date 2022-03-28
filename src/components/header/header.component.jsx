@@ -44,15 +44,15 @@ const Header = () => {
           />
         </div>
 
-        <header className='grid grid-cols-1 sm:grid-cols-2'>
-          <div className='flex items-center mt-36 sm:-mt-64'>
-            <div className='space-y-16'>
+        <header className='flex grid grid-cols-1 sm:grid-cols-2 items-center mt-20 sm:mt-5 lg:-mt-12'>
+          <div className=''>
+            <div className='flex items-center flex-col'>
               <div
                 className=''
                 data-aos='fade-up'
                 data-aos-delay='50'
                 data-aos-duration='1000'>
-                <h1 className='text-2xl font-bold md:text-3xl lg:text-5xl word-space'>
+                <h1 className='text-2xl font-bold md:text-3xl lg:text-4xl word-space'>
                   We offer <span className='text-sacblue'>Safe</span>,
                   <span className='text-sacblue'> Affordable</span> and
                   <span className='text-sacblue'> Convenient</span> homes for
@@ -60,18 +60,18 @@ const Header = () => {
                 </h1>
               </div>
               <div
-                className='flex sm:px-5 lg:px-0 mt-14 space-x-7 lg:space-x-11 '
+                className='flex sm:px-5 lg:px-0 mt-14 space-x-7 lg:space-x-11'
                 data-aos='fade-up'
                 data-aos-delay='300'
                 data-aos-duration='800'>
-                <button className='px-5 bg-black py-2overflow-hidden sm:w-60 rounded-xl'>
+                <button className='px-5 bg-black py-2overflow-hidden sm:w-40 lg:w-60 rounded-xl'>
                   <img
                     className='object-cover'
                     src={googlePlay}
                     alt='get on playstore'
                   />
                 </button>
-                <button className='px-5 py-3 overflow-hidden bg-black sm:w-60 rounded-xl'>
+                <button className='px-5 py-3 overflow-hidden bg-black sm:w-40 lg:w-60 rounded-xl'>
                   <img
                     className='object-cover '
                     src={AppleStore}
@@ -81,7 +81,7 @@ const Header = () => {
               </div>
             </div>
           </div>
-          <div className='flex items-center justify-center mt-10 sm:mt-0'>
+          <div className=''>
             <img
               src={phonePack}
               alt='AppleStore'
