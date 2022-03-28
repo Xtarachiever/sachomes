@@ -1,5 +1,5 @@
 import React from 'react';
-import Rotate from 'react-reveal/Rotate';
+// import Rotate from 'react-reveal/Rotate';
 import './apartments.style.css';
 import { Title } from '../../Title';
 import project1 from '../../../images/Project Cover 1.svg';
