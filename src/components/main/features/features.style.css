@@ -1,6 +1,6 @@
 .features-section {
-  min-height: 771px;
-  background: rgba(137, 59, 0, 0.04);
+  /* min-height: 771px; */
+  background-color: rgba(137, 59, 0, 0.04);
 }
 .download-icon {
   background: #ffffff;
@@ -37,10 +37,15 @@
     #008ffc 89.53%
   );
 }
-
-.feature-slides {
-  min-height: 771px;
+h3{
+  font-size: 22px;
 }
+h5{
+  color:#7E838E;
+}
+/* .feature-slides {
+  min-height: 771px;
+} */
 
 /* .slide-container {
   min-height: 771px;

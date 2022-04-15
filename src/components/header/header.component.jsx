@@ -12,7 +12,7 @@ import star from '../../images/emoji/star-emoji.svg';
 import Social from './Social.component';
 
 const Header = () => {
-  const [visibilty, changeVisibility] = useState(true);
+  const [visibilty, changeVisibility] = useState(false);
   const handleLogoClick = () => {
     changeVisibility(!visibilty);
   };
@@ -46,7 +46,7 @@ const Header = () => {
 
         <header className='flex grid grid-cols-1 sm:grid-cols-2 items-center mt-20 sm:mt-5 lg:-mt-12'>
           <div className=''>
-            <div className='flex items-center flex-col'>
+            <div className='flex items-start flex-col'>
               <div
                 className=''
                 data-aos='fade-up'
@@ -60,18 +60,18 @@ const Header = () => {
                 </h1>
               </div>
               <div
-                className='flex sm:px-5 lg:px-0 mt-14 space-x-7 lg:space-x-11'
+                className='flex sm:px-5 lg:px-0 mt-14 space-x-7 lg:space-x-11 max-w-xs sm:max-w-sm'
                 data-aos='fade-up'
                 data-aos-delay='300'
                 data-aos-duration='800'>
-                <button className='px-5 bg-black py-2overflow-hidden sm:w-40 lg:w-60 rounded-xl'>
+                <button className='px-5 bg-black py-2overflow-hidden rounded-xl'>
                   <img
                     className='object-cover'
                     src={googlePlay}
                     alt='get on playstore'
                   />
                 </button>
-                <button className='px-5 py-3 overflow-hidden bg-black sm:w-40 lg:w-60 rounded-xl'>
+                <button className='px-5 py-3 overflow-hidden bg-black rounded-xl'>
                   <img
                     className='object-cover '
                     src={AppleStore}

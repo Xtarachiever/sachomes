@@ -19,6 +19,7 @@ module.exports = {
         brfirmaregular: ['brfirmaregular'],
       },
       screens: {
+        // xs: '320px',
         sm: '640px',
         // => @media (min-width: 640px) { ... }
 
@@ -36,7 +37,7 @@ module.exports = {
       },
     },
     backgroundImage: {
-      'hero-pattern': "url('/src/images/hero-background.svg')",
+      'hero-pattern': "url('/src/images/Mask Group.svg')",
     },
   },
   variants: {

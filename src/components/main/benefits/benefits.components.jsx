@@ -19,7 +19,7 @@ const Benefits = () => {
               data-aos-duration='1000'
             />
           </div>
-          <div className='flex-1 px-10 mb-10 lg:mb-0 gap-y-5 lg:text-left'>
+          <div className='flex-1 items-start px-10  mb-10 lg:mb-0 gap-y-5 lg:text-left'>
             <Title>Benefits</Title>
             <div
               className='mb-5 text-base'
@@ -32,7 +32,7 @@ const Benefits = () => {
               Habitant porta sagittis facilisis ut lacus condimentum fermentum.
               Sed pellentesque volutpat elit et sagittis ultrices ut.
             </div>
-            <ul className='mb-10 ml-10 text-left list-disc list'>
+            <ul className='mb-10 ml-2 text-left list-disc list'>
               <li
                 data-aos='fade-up'
                 data-aos-delay='350'

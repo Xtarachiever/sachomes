@@ -1,30 +1,53 @@
 import React from 'react';
 import './features.style.css';
 import { Title } from '../../Title';
-import { SlideContent } from './slide.component';
-import feature1 from '../../../images/iphone-12--black.png';
-import feature2 from '../../../images/feature-2-iphone-12.png';
-import feature3 from '../../../images/feature-3-iphone-12.png';
+// import { SlideContent } from './slide.component';
+// import feature1 from '../../../images/iphone-12--black.png';
+// import feature2 from '../../../images/feature-2-iphone-12.png';
+// import feature3 from '../../../images/feature-3-iphone-12.png';
 
 import 'pure-react-carousel/dist/react-carousel.es.css';
 
-import {
-  CarouselProvider,
-  Slider,
-  Slide,
-  ButtonBack,
-  ButtonNext,
-} from 'pure-react-carousel';
+// import {
+//   CarouselProvider,
+//   Slider,
+//   Slide,
+//   ButtonBack,
+//   ButtonNext,
+// } from 'pure-react-carousel';
 
 const Features = () => {
   return (
     <>
-      <div className='py-10 features-section' id='features-section'>
+      <div className='py-10 features-section bg-hero-pattern' id='features-section'>
         <div className='px-5 features lg:px-10'>
-          <div className='mb-5 text-center'>
+          <div className='mb-10 text-center'>
             <Title>App Features</Title>
           </div>
-          <div className='slide-container'>
+          <div className="flex flex-col justify-center sm:flex-row sm:justify-between">
+            <div className="mb-10 sm:mr-10">
+              <span className="p-2 text-white rounded-full slide-number">
+                01
+              </span>
+              <h3 className="mt-5">Access to many apartments</h3>
+              <h5 className="mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus, metus orci, et at. Scelerisque turpis tortor, nullam sed. Semper in nunc odio semper.</h5>
+            </div>
+            <div className="mb-10 sm:mr-10">
+              <span className='p-2 text-white rounded-full slide-number'>
+                02
+              </span>
+              <h3 className="mt-5">Detailed descriptions and reviews</h3>
+              <h5 className="mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus, metus orci, et at. Scelerisque turpis tortor, nullam sed. Semper in nunc odio semper.</h5>
+            </div>
+            <div>
+              <span className='p-2 text-white rounded-full slide-number'>
+                03
+              </span>
+              <h3 className="mt-5">Get updated always</h3>
+              <h5 className="mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus, metus orci, et at. Scelerisque turpis tortor, nullam sed. Semper in nunc odio semper.</h5>
+            </div>
+          </div>
+          {/* <div className='slide-container'>
             <CarouselProvider
               naturalSlideWidth={100}
               isIntrinsicHeight={true}
@@ -63,7 +86,7 @@ const Features = () => {
                <ButtonNext>Next</ButtonNext>
               </button>
             </CarouselProvider>
-          </div>
+          </div> */}
         </div>
       </div>
     </>
