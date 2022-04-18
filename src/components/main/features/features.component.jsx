@@ -24,27 +24,27 @@ const Features = () => {
           <div className='mb-10 text-center'>
             <Title>App Features</Title>
           </div>
-          <div className="flex flex-col justify-center sm:flex-row sm:justify-between">
+          <div className="flex flex-col justify-center sm:flex-row sm:justify-between px-10">
             <div className="mb-10 sm:mr-10">
               <span className="p-2 text-white rounded-full slide-number">
                 01
               </span>
               <h3 className="mt-5">Access to many apartments</h3>
-              <h5 className="mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus, metus orci, et at. Scelerisque turpis tortor, nullam sed. Semper in nunc odio semper.</h5>
+              <h5 className="mt-3">You will have access to many featured apartments from different locations thereby making the need for a physical inspection reduced and money saved.</h5>
             </div>
             <div className="mb-10 sm:mr-10">
               <span className='p-2 text-white rounded-full slide-number'>
                 02
               </span>
               <h3 className="mt-5">Detailed descriptions and reviews</h3>
-              <h5 className="mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus, metus orci, et at. Scelerisque turpis tortor, nullam sed. Semper in nunc odio semper.</h5>
+              <h5 className="mt-3">The app has detailed descriptions and reviews about each apartment from different past users in order to enlighten our current users.</h5>
             </div>
-            <div>
+            <div className="">
               <span className='p-2 text-white rounded-full slide-number'>
                 03
               </span>
               <h3 className="mt-5">Get updated always</h3>
-              <h5 className="mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus, metus orci, et at. Scelerisque turpis tortor, nullam sed. Semper in nunc odio semper.</h5>
+              <h5 className="mt-3">You will be the first to know as soon as we have uploaded new apartments to explore. We put our customers first always!</h5>
             </div>
           </div>
           {/* <div className='slide-container'>

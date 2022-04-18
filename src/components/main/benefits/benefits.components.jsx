@@ -6,7 +6,7 @@ import './benefits.style.css';
 
 const Benefits = () => {
   return (
-    <div className='flex items-center benefits'>
+    <div className='px-5 flex items-center benefits'>
       <div className='container w-full mx-auto'>
         <div className='flex flex-col-reverse gap-0 py-20 lg:py-0 lg:flex-row lg:items-center lg:justify-between lg:flex lg:px-10'>
           <div className=''>
@@ -26,11 +26,9 @@ const Benefits = () => {
               data-aos='fade-up'
               data-aos-delay='300'
               data-aos-duration='1000'>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et quis
-              eget varius quis adipiscing. Vitae sem sit est enim, proin.
-              Habitasse varius convallis mauris ornare egestas adipiscing felis.
-              Habitant porta sagittis facilisis ut lacus condimentum fermentum.
-              Sed pellentesque volutpat elit et sagittis ultrices ut.
+                We love to think about our users first and how to make it easy when searching for an apartment. 
+                At SAChomes, we make sure our users get exactly their dream houses, and below are some of the benefits 
+                you get to enjoy as a user:
             </div>
             <ul className='mb-10 ml-2 text-left list-disc list'>
               <li

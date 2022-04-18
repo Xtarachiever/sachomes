@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect} from 'react';
 import 'animate.css';
 import './header.style.css';
 import Logo from '../../images/logo.svg';
@@ -13,22 +13,40 @@ import Social from './Social.component';
 
 const Header = () => {
   const [visibilty, changeVisibility] = useState(false);
+  const [isMobile, setIsMobile] = useState(false)
   const handleLogoClick = () => {
     changeVisibility(!visibilty);
   };
+ 
+  //choose the screen size 
+  const handleResize = () => {
+    if (window.innerWidth < 320) {
+        setIsMobile(true)
+    } else {
+        setIsMobile(false)
+    }
+  }
+  window.addEventListener('resize', handleResize)
+  useEffect(()=>{
+    handleResize()
+ },[isMobile])
   return (
-    <div className='pt-3 bg-no-repeat bg-cover header-section bg-hero-pattern'>
-      <div className='container px-5 mx-auto lg:px-10'>
+    <div className='pt-3 px-5 bg-no-repeat bg-cover header-section bg-hero-pattern lg:px-10'>
+      <div className=' px-5 mx-auto'>
         <nav className='flex items-center justify-between w-full'>
           <div className=''>
-            <img src={Logo} alt='logo' className='sm:h-full h-4/6' />
+            <img src={Logo} alt='logo' className='w-3/4 sm:h-full h-4/6 sm:w-full w-1/3' />
           </div>
-          <div className='flex items-center gap-x-5'>
+          <div className='flex items-center'>
             <div className='relative' onClick={() => handleLogoClick()}>
               <Follow />
               {visibilty && <Social />}
             </div>
-            <p>Follow</p>
+            <div>
+              {
+                isMobile ? (visibilty) : <p>Follow</p>
+              }
+            </div>
           </div>
         </nav>
         <div className='relative'>
@@ -40,13 +58,12 @@ const Header = () => {
           <img
             src={star}
             alt='star'
-            className='absolute h-8 mt-5 top-20 sm:-top-20 right-5 sm:right-72 sm:h-12 animate-spin'
+            className='absolute h-8 mt-5 -top-10 sm:-top-20 right-5 sm:right-72 sm:h-12 animate-spin'
           />
         </div>
-
         <header className='flex grid grid-cols-1 sm:grid-cols-2 items-center mt-20 sm:mt-5 lg:-mt-12'>
           <div className=''>
-            <div className='flex items-start flex-col'>
+            <div className='flex items-center flex-col sm:items-start'>
               <div
                 className=''
                 data-aos='fade-up'
@@ -60,7 +77,7 @@ const Header = () => {
                 </h1>
               </div>
               <div
-                className='flex sm:px-5 lg:px-0 mt-14 space-x-7 lg:space-x-11 max-w-xs sm:max-w-sm'
+                className='flex lg:px-0 mt-14 space-x-7 lg:space-x-11 max-w-xs sm:max-w-md'
                 data-aos='fade-up'
                 data-aos-delay='300'
                 data-aos-duration='800'>

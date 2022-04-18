@@ -11,7 +11,7 @@ import project6 from '../../../images/Project Cover 6.svg';
 
 const Apartments = () => {
   return (
-    <div className='flex flex-row items-center justify-center mb-20 apartments lg:px-10'>
+    <div className='px-5 flex flex-row items-center justify-center mb-20 apartments lg:px-10'>
       <div>
         <div className='my-12 text-center'>
           <Title>Some of our Apartments...</Title>
