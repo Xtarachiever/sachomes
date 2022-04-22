@@ -35,7 +35,7 @@ const Header = () => {
       <div className=' px-5 mx-auto'>
         <nav className='flex items-center justify-between w-full'>
           <div className=''>
-            <img src={Logo} alt='logo' className='w-3/4 sm:h-full h-4/6 sm:w-full w-1/3' />
+            <img src={Logo} alt='logo' className='w-3/4 sm:h-full h-4/6 sm:w-full w-1/3 lg:h-5/6'/>
           </div>
           <div className='flex items-center'>
             <div className='relative' onClick={() => handleLogoClick()}>
@@ -69,7 +69,7 @@ const Header = () => {
                 data-aos='fade-up'
                 data-aos-delay='50'
                 data-aos-duration='1000'>
-                <h1 className='text-2xl font-bold md:text-3xl lg:text-4xl word-space'>
+                <h1 className='text-2xl font-bold md:text-3xl lg:text-4xl xl:text-5xl word-space'>
                   We offer <span className='text-sacblue'>Safe</span>,
                   <span className='text-sacblue'> Affordable</span> and
                   <span className='text-sacblue'> Convenient</span> homes for
@@ -77,7 +77,7 @@ const Header = () => {
                 </h1>
               </div>
               <div
-                className='flex lg:px-0 mt-14 space-x-7 lg:space-x-11 max-w-xs sm:max-w-md'
+                className='flex lg:px-0 mt-14 space-x-7 lg:space-x-11 max-w-xs sm:max-w-md xl:max-w-lg'
                 data-aos='fade-up'
                 data-aos-delay='300'
                 data-aos-duration='800'>
