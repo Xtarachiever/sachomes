@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import hand from '../../../images/hand.svg'
 import './login.css';
 import Validation from './Validation';
@@ -12,9 +12,9 @@ function Login() {
     const [activePass,setActivePass] = useState(false)
     const [errors, setErrors] = useState({})
 
-    useEffect(()=>{
-        console.log(errors)
-    },[])
+    // useEffect(()=>{
+    //     console.log(errors)
+    // },[])
     const handleChange = (e)=>{
         setInput({...input, [e.target.name] : e.target.value})
     }

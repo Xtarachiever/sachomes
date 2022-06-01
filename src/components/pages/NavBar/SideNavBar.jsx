@@ -9,7 +9,7 @@ function SideNavBar() {
 
     useEffect(()=>{
         setAppState({...appState, active: appState.objects[0]})
-    },[])
+    },[appState])
 
     const toggleActive = (index)=>{
         setAppState({...appState, active: appState.objects[index]})
