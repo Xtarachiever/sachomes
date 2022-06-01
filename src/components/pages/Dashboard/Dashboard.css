@@ -1,0 +1,244 @@
+::-webkit-scrollbar{
+    width: 10px;
+    height: 4px;
+}
+::-webkit-scrollbar-track{
+    border-radius: 2px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #eeeeee;
+    opacity: 20%;
+}
+.dashboard{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: none;
+    position: relative;
+}
+.dashboard .all_container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+.dashboard .all_container .container{
+    flex-grow: 1;
+    padding: 5rem;
+    padding-right: 2rem;
+    overflow-y: scroll;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    z-index: 1;
+    min-width: 350px;
+    overflow-x: scroll;
+    margin-left: 100px;
+    align-items: center;
+}
+.dashboard .board .each_board{
+    display: flex;
+    align-items: center;
+}
+.dashboard .board .each_board p{
+    font-size: 14px;
+    opacity: 50%;
+    color: #333333;
+}
+.dashboard .board .grid_box{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    border-radius: 10px;
+}
+.dashboard .paginate{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dashboard .paginate .pagination{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+    flex-direction: row;
+    width: 30%;
+    border-radius: 30px;
+    box-shadow: 1px 1px 10px #333333;
+}
+.dashboard .paginate .pagination .active{
+    background-color: #893B00;
+    border-radius: 100%;
+    height: 20px;
+    width: 20px;
+    position: relative;
+    padding: 15px;
+}
+.dashboard .arrows{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.dashboard .prev_arrow:active,.dashboard .next_arrow:active {
+    background-color: #893B00;
+}
+.dashboard .next_arrow,.dashboard .prev_arrow{
+    position: relative;
+    height: 20px;
+    width: 20px;
+    padding: 10px;
+    border-radius: 100%;
+    box-shadow: 1px 5px 10px #333333;
+    padding: 15px;
+}
+.dashboard .next_arrow{
+    left: 60px;
+}
+.dashboard .prev_arrow{
+    right: 60px;
+}
+.dashboard .active_link{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+}
+.dashboard .container .houses_list{
+    width: 100%;
+}
+.dashboard .container .houses_list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 50px;
+    align-items: center;
+}
+.dashboard .searchBoard{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    justify-content: space-between;
+    padding-right: 10px;
+}
+.dashboard .uploadBoard{
+    display: flex;
+    margin-right: 15px;
+    padding-bottom: 30px;
+    width: 100vw;
+}
+.dashboard .searchBoard span{
+    position: absolute;
+    left: 15px;
+}
+.dashboard .searchBoard input, .dashboard .uploadBoard select{
+    border: 1px solid #C1CACF80;
+    border-radius: 10px;
+}
+.dashboard .searchBoard input{
+    padding: 5px 0px 5px 35px;
+}
+.dashboard .uploadBoard .select{
+    padding: 5px 10px;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance:none;
+    background-image: url('../../../images/icon/chevronDown.svg');
+    background-repeat: no-repeat;
+    background-position: right 10px top 50%;
+    background-size: 20px;
+    padding-right: 50px;
+    outline: none;
+}
+.dashboard .searchBoard input:focus,.dashboard .searchBoard input:hover,
+.dashboard .uploadBoard .select:focus, .dashboard .uploadBoard .select:hover{
+    outline: none;
+    border: 1px solid #C1CACF80;
+}
+.dashboard .uploadBoard .select option{
+    padding: 30px;
+    height: 50px;
+}
+.dashboard .content-table{
+    border-collapse: collapse;
+    font-size: 0.9em;
+    min-width: 400px;
+    width: 100%;
+    display: table;
+    table-layout: auto;
+    overflow-x: scroll;
+}
+
+.dashboard .section{
+    overflow-x: scroll;
+    padding: 20px;
+}
+
+.dashboard .content-table thead tr{
+    text-align: left;
+    color: #333333;
+}
+.dashboard .content-table th{
+    font-weight: 400;
+}
+.dashboard .content-table th, 
+.content-table td{
+    padding: 12px 15px;
+}
+.dashboard .grid_box{
+    background-color: white;
+}
+@media screen and (max-width: 900px) {
+    .dashboard .paginate .pagination{
+        width: 45%;
+    }
+}
+@media screen and (max-width: 640px) {
+    .dashboard .board .each_board{
+        display: flex;
+        align-items: flex-start;
+        overflow-x: scroll;
+    }
+    .dashboard .board .each_board img{
+        padding-top: 5px;
+    }
+}
+@media screen and (max-width: 640px) {
+    .dashboard .paginate .pagination{
+        width: 35%;
+        min-width: 200px;
+    }
+    .dashboard .arrows{
+        display: flex;
+    }
+    .dashboard .next_arrow{
+        left: 0;
+    }
+    .dashboard .prev_arrow{
+        right: 0;
+    }
+    .dashboard .next_arrow,.dashboard .prev_arrow{
+        box-shadow: none;
+    }
+}
+@media screen and (max-width: 450px) {
+    .dashboard .container .houses_list{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 80px;
+    }
+
+}

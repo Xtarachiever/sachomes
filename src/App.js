@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react';
 import 'animate.css';
 import './App.css';
-import Header from './components/header/header.component';
-import Features from './components/main/features/features.component';
-import Benefits from './components/main/benefits/benefits.components';
-import Footer from './components/footer/footer.component';
-import Apartments from './components/main/apartments/apartments.component';
+import Main from './components/pages/Main';
+import Login from './components/pages/Login/Login';
+import {Routes, Route } from 'react-router-dom';
 import 'aos/dist/aos.css';
+import Dashboard from './components/pages/Dashboard/Dashboard';
+import NewHouses from './components/pages/Dashboard/NewHouses/NewHouses';
 
 const App = () => {
   let AOS;
@@ -24,11 +24,12 @@ const App = () => {
   });
   return (
     <>
-      <Header />
-      <Apartments />
-      <Features />
-      <Benefits />
-      <Footer />
+      <Routes>
+        <Route path='/' element={<Main/>}/>
+        <Route path='/login' element={<Login />}/>
+        <Route path='/dashboard' element={<Dashboard/>}/>
+        <Route path='/dashboard/addHouses' element={<NewHouses/>}/>
+      </Routes>
     </>
   );
 };

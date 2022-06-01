@@ -1,0 +1,7 @@
+.reuseable button{
+    background-image: linear-gradient(#006EC2,#004E89,#008FFC);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 10px;
+    font-size: 14px;
+}
