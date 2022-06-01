@@ -35,23 +35,23 @@ const handlePageClick = (event) => {
       <Navbar name="Dashboard"/>
       <div className='all_container'>
         <SideNavBar/>
-        <div className='container'>
-          <div className='grid grid-cols-1 sm:grid-cols-3 gap-3 w-full pt-5 board'>
-            <div className='shadow-xl grid_box'>
+        <div className='containers'>
+          <div className='grid grid-cols-1 sm:grid-cols-3 gap-10 w-full mt-10 board'>
+            <div className='shadow-2xl grid_box'>
               <div className='each_board'>
                 <img src={icon} alt="icon" className='pr-5'/>
                 <p className='sm:pr-10 leading-6 opacity-50'>Total Number of Houses Added</p>
               </div>
               <p><b>24</b></p>
             </div>
-            <div className='shadow-xl grid_box'>
+            <div className='shadow-2xl grid_box'>
               <div className='each_board'>
                 <img src={icon} alt="icon" className='pr-5'/>
                 <p className='sm:pr-10 leading-6 opacity-50'>Total Number of Opened Houses</p>
               </div>
               <p><b>22</b></p>
             </div>
-            <div className='shadow-xl grid_box'>
+            <div className='shadow-2xl grid_box'>
               <div className='each_board'>
                 <img src={icon} alt="icon" className='pr-5'/>
                 <p className='sm:pr-10 leading-6 opacity-50'>Total Number of Closed Houses</p>

@@ -3,13 +3,9 @@ import './SideNavBar.css'
 
 function SideNavBar() {
     const [appState, setAppState] = useState({
-        active:null,
-        objects: [{id: 1 ,name:'Dashboard'}, {id:2, name:'Admins'}, {id:3,name:'Logout'}]
+        active:0,
+        objects: [{id: 1, name:'Dashboard'}, {id:2, name:'Admins'}, {id:3,name:'Logout'}]
     })
-
-    useEffect(()=>{
-        setAppState({...appState, active: appState.objects[0]})
-    },[])
 
     const toggleActive = (index)=>{
         setAppState({...appState, active: appState.objects[index]})
@@ -28,7 +24,7 @@ function SideNavBar() {
         {
             appState.objects.map((id,index)=>(
                 <div key={index} className="items">
-                    <p onClick={()=>toggleActive(index)} 
+                    <p onClick={()=>toggleActive(index)}
                     className={toggleActiveClassname(index)}>{id.name}</p>
                 </div>
             ))

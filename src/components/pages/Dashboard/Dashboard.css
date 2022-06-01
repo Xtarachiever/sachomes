@@ -27,7 +27,7 @@
     height: 100vh;
 }
 
-.dashboard .all_container .container{
+.dashboard .all_container .containers{
     flex-grow: 1;
     padding: 5rem;
     padding-right: 2rem;
@@ -48,16 +48,18 @@
 .dashboard .board .each_board p{
     font-size: 14px;
     color: #333333;
+    max-width: 180px;
 }
 .dashboard .board .grid_box{
     display: flex;
     flex-direction: column;
-    padding: 1rem;
+    padding: 1rem 30px;
     border-radius: 10px;
 }
 .dashboard .section{
     overflow-x: scroll;
     padding: 20px;
+    width: 100%;
 }
 .dashboard .paginate{
     width: 100%;
@@ -117,10 +119,10 @@
     transform: translate(-50%,-50%);
     color: white;
 }
-.dashboard .container .houses_list{
+.dashboard .containers .houses_list{
     width: 100%;
 }
-.dashboard .container .houses_list{
+.dashboard .containers .houses_list{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -138,6 +140,8 @@
 .dashboard .section .uploadBoard{
     display: flex;
     padding-bottom: 20px;
+    width: 100%;
+    justify-content: space-between;
 }
 .dashboard .searchBoard span{
     position: absolute;
@@ -212,8 +216,6 @@
     .dashboard .board .each_board img{
         padding-top: 5px;
     }
-}
-@media screen and (max-width: 640px) {
     .dashboard .paginate .pagination{
         width: 35%;
         min-width: 200px;
@@ -232,7 +234,7 @@
     }
 }
 @media screen and (max-width: 450px) {
-    .dashboard .container .houses_list{
+    .dashboard .containers .houses_list{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
