@@ -2,7 +2,7 @@
     background-color: white;
     z-index: 2;
     padding-top: 100px;
-    height: 100vh;
+    height: 100%;
     position: fixed;
 }
 .side_bar .items p{
