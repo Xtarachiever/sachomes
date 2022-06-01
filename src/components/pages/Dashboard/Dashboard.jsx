@@ -40,21 +40,21 @@ const handlePageClick = (event) => {
             <div className='shadow-xl grid_box'>
               <div className='each_board'>
                 <img src={icon} alt="icon" className='pr-5'/>
-                <p className='sm:pr-10 leading-6'>Total Number of Houses Added</p>
+                <p className='sm:pr-10 leading-6 opacity-50'>Total Number of Houses Added</p>
               </div>
               <p><b>24</b></p>
             </div>
             <div className='shadow-xl grid_box'>
               <div className='each_board'>
                 <img src={icon} alt="icon" className='pr-5'/>
-                <p className='sm:pr-10 leading-6'>Total Number of Opened Houses</p>
+                <p className='sm:pr-10 leading-6 opacity-50'>Total Number of Opened Houses</p>
               </div>
               <p><b>22</b></p>
             </div>
             <div className='shadow-xl grid_box'>
               <div className='each_board'>
                 <img src={icon} alt="icon" className='pr-5'/>
-                <p className='sm:pr-10 leading-6'>Total Number of Closed Houses</p>
+                <p className='sm:pr-10 leading-6 opacity-50'>Total Number of Closed Houses</p>
               </div>
               <p><b>02</b></p>
             </div>

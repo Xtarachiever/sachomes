@@ -47,7 +47,6 @@
 }
 .dashboard .board .each_board p{
     font-size: 14px;
-    opacity: 50% !important;
     color: #333333;
 }
 .dashboard .board .grid_box{
@@ -161,6 +160,7 @@
     background-size: 20px;
     padding-right: 50px;
     outline: none;
+    background-color: white;
 }
 .dashboard .searchBoard input:focus,.dashboard .searchBoard input:hover,
 .dashboard .uploadBoard .select:focus, .dashboard .uploadBoard .select:hover{
