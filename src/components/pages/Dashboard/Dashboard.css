@@ -55,6 +55,10 @@
     padding: 1rem;
     border-radius: 10px;
 }
+.dashboard .section{
+    overflow-x: scroll;
+    padding: 20px;
+}
 .dashboard .paginate{
     width: 100%;
     display: flex;
@@ -131,11 +135,9 @@
     justify-content: space-between;
     padding-right: 10px;
 }
-.dashboard .uploadBoard{
+.dashboard .section .uploadBoard{
     display: flex;
-    margin-right: 15px;
-    padding-bottom: 30px;
-    width: 100vw;
+    padding-bottom: 20px;
 }
 .dashboard .searchBoard span{
     position: absolute;
@@ -161,6 +163,7 @@
     padding-right: 50px;
     outline: none;
     background-color: white;
+    margin-right: 20px;
 }
 .dashboard .searchBoard input:focus,.dashboard .searchBoard input:hover,
 .dashboard .uploadBoard .select:focus, .dashboard .uploadBoard .select:hover{
@@ -179,11 +182,6 @@
     display: table;
     table-layout: auto;
     overflow-x: scroll;
-}
-
-.dashboard .section{
-    overflow-x: scroll;
-    padding: 20px;
 }
 
 .dashboard .content-table thead tr{
