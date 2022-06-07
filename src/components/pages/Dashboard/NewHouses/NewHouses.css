@@ -31,8 +31,9 @@
 .add_house .house_details .title{
     display: flex;
     align-items: center;
+    align-self: flex-end;
     color: #001833;
-    margin-left: 120px;
+    padding-left: 30px;
     width: 100%;
 }
 .add_house .house_details .title p{
@@ -46,6 +47,7 @@
     grid-template-columns: 45% 45%;
     grid-column-gap: 2em;
     max-width: 1200px;
+    margin-right: 80px;
 }
 .add_house .house_details p{
     align-self: flex-start;
@@ -82,10 +84,17 @@
     top: -15px;
     font-size: 9px;
 }
-.add_houses .file{
+.add_houses .upload-files{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-start;
+}
+.add_houses label .file{
     display: flex;
     justify-content: center;
-    padding: 10px;
+    padding: 12px;
     border: 2px dotted #E8E8E8;
     cursor: pointer;
     border-radius: 10px;
@@ -130,6 +139,11 @@
     width: 300px;
     margin-top: 20px;
 }
+@media screen and (max-width:750px){
+    .add_house .house_details .add_houses{
+        margin-right: 0px;
+    }
+}
 @media screen and (max-width:500px) {
     .add_house .house_details .button{
         width: 100%;
@@ -140,6 +154,6 @@
         grid-template-columns:100%;
     }
     .add_house .house_details .title{
-        margin-left: 0px;
+        padding-left: 0px;
     }
 }

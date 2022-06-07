@@ -1,9 +1,9 @@
-import React,{useState} from 'react';
+import React,{useEffect, useState} from 'react';
 import './SideNavBar.css'
 
 function SideNavBar() {
     const [appState, setAppState] = useState({
-        active:0,
+        active:{id: 1, name:'Dashboard'},
         objects: [{id: 1, name:'Dashboard'}, {id:2, name:'Admins'}, {id:3,name:'Logout'}]
     })
 

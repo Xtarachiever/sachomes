@@ -152,10 +152,10 @@
     border-radius: 10px;
 }
 .dashboard .searchBoard input{
-    padding: 5px 0px 5px 35px;
+    padding: 5px 30px 5px 35px;
 }
 .dashboard .uploadBoard .select{
-    padding: 5px 10px;
+    padding: 5px 30px;
     cursor: pointer;
     appearance: none;
     -webkit-appearance: none;
@@ -168,6 +168,10 @@
     outline: none;
     background-color: white;
     margin-right: 20px;
+}
+.dashboard .uploadBoard .filter{
+    padding: 0.5em 3em;
+    width: 100%;
 }
 .dashboard .searchBoard input:focus,.dashboard .searchBoard input:hover,
 .dashboard .uploadBoard .select:focus, .dashboard .uploadBoard .select:hover{
@@ -240,5 +244,10 @@
         justify-content: space-between;
         height: 80px;
     }
-
+    .dashboard .uploadBoard .filter{
+        padding: 5px 10px;
+    }
+    .dashboard .searchBoard input{
+        padding: 5px 0px 5px 35px;
+    }
 }

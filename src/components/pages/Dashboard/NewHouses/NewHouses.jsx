@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Navbar from '../../NavBar/Navbar'
 import SideNavBar from '../../NavBar/SideNavBar'
 import './NewHouses.css'
@@ -6,6 +6,11 @@ import file_Icon from '../../../../images/Mask.svg'
 import Button from '../../ReusableButton/Button'
 import { Link } from 'react-router-dom'
 function NewHouses() {
+    const [fileName, setFileName]= useState([])
+    const fileChanger=(e)=>{
+        console.log(e.target.files) 
+        setFileName(e.target.files)
+    }
   return (
     <div>
         <Navbar name='Dashboard'/>
@@ -47,10 +52,17 @@ function NewHouses() {
                         <textarea placeholder='' rows={4} type='text' className='input' required></textarea>
                         <span>Full Address</span>
                     </label>
-                    <label htmlFor='file' className='file'>
-                        <img src={file_Icon} alt="upload"/>
-                        Upload Images
-                        <input type="file" id='file' required/>
+                    <label htmlFor='file' className='upload-files'>
+                        <div className='file'>
+                            <img src={file_Icon} alt="upload"/>
+                            Upload Images
+                            <input multiple type="file" id='file' required onChange={fileChanger}/>
+                        </div>
+                        {/* {
+                            fileName.length ? fileName.map(files=>(
+                                <img src={files.name} alt="files"/>
+                            )) : null
+                        } */}
                     </label>
                     <div>
                         <select className='select' defaultValue="Status">

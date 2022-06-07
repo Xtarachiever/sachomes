@@ -78,7 +78,7 @@ const handlePageClick = (event) => {
                   <option disabled value="select state">Select state</option>
                   <option value="oyo">Oyo</option>
                 </select>
-              <Button name="Filter"/>
+              <Button name="Filter" className="filter"/>
             </div>
             <div className='responsive-table'>
               <table className='content-table'>

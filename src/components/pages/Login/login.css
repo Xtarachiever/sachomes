@@ -6,7 +6,7 @@
     flex-direction: column;
     align-items: center;
 }
-.form{
+.login-page{
     position: relative;
     display: flex;
     flex-direction: column;
@@ -15,97 +15,74 @@
     min-height: 25rem;
     max-width: 25rem;
 }
-.form .welcome{
+.login-page .welcome{
     display: flex;
     justify-content: space-between;
     min-width: 10rem;
     align-items: center;
 }
-.form .welcome h3{
+.login-page .welcome h3{
     margin-right: 5px;
 }
-.form h5{
+.login-page h5{
     text-align: center;
 }
-.form .inputBox{
-    width: 100%;
-    min-height: 8rem;
+.login-page label{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }
-.form .inputBox input{
-    width: 100%;
-    padding: 10px;
-    border-radius: 15px;
-    border: 1px solid #E8E8E8;
-    background-color: white !important;
+.login-page form{
+    display: block;
+    margin-top: 20px;
+    width: 80%;
+}
+.login-page form label{
+    position: relative;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+.login-page form label img,.login-page form label svg{
+    position: absolute;
+    top: 20px;
+    margin-right: 15px;
+    right: 0;
+    cursor: pointer;
+    background-color: #ffffff;
+}
+.login-page form label img{
+    width: 20px;
+}
+.errors{
+    color: red;
+}
+.login-page label input{
     outline: none;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 10px;
+    border: 1px solid #E8E8E8;
 }
-.form .inputBox .correct{
-    border: 1px solid green;
-}
-.form .inputBox .incorrect{
+.login-page label input.border-error{
     border: 1px solid red;
 }
-.form .inputClass{
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+.login-page label input.border-correct{
+    border: 1px solid green;
 }
-.form .inputClass svg{
-    position: absolute;
-    right: 0;
-    margin-right: 10px;
-}
-.form .password{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 100%;
-    justify-content: space-between;
-    position: relative;
-    margin-top: 10px;
-}
-.form .password svg{
-    position: absolute;
-    right: 0;
-    margin-right: 15px;
-    cursor: pointer;
-}
-.form h4{
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    background-image: linear-gradient(#006EC2,#004E89,#008FFC);
-    background-size: 100%;
-    background-repeat: repeat;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-background-clip: text;
-    -moz-text-fill-color: transparent;
-    cursor: pointer;
-}
-.form button{
+.login-page form button{
     color: white;
     background-image: linear-gradient(#004E89,#006EC2,#008FFC);
     cursor: pointer;
 }
-p.error{
-    color: red;
-    text-align: center;
-    margin-bottom: 5px;
+.button:disabled{
+    color:#cccccc;
+    cursor: not-allowed;
 }
 
-@media screen and (max-width: 240px) {
-    .form{
+@media screen and (max-width: 250px) {
+    .formBlock{
         min-height:30rem;
-    }
-    .form h4, .form .welcome h3, .form h5{
-        text-align: center;
-    }
-    .form .welcome{
-        min-width: 0;
+        overflow-x: scroll;
+        min-width: 300px;
     }
 }

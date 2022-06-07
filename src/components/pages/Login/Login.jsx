@@ -1,84 +1,98 @@
 import React, { useState } from 'react';
-import hand from '../../../images/hand.svg'
-import './login.css';
-import Validation from './Validation';
+import './login.css'
+import hand from '../../../images/hand.svg';
+import openEyes from '../../../images/icon/open-eyes.svg';
+import closedEyes from '../../../images/icon/closed-eyes.svg'
+import {Formik, Form, Field,ErrorMessage} from 'formik'
+import TextError from './TextError';
 
 function Login() {
-    const [input, setInput] = useState({
-        email: "",
-        password:""
-    });
-    const [activeInput,setActiveInput] = useState(false)
-    const [activePass,setActivePass] = useState(false)
-    const [errors, setErrors] = useState({})
+  const [passwordType,setPassword] = useState('password');
+  const [icons,setIcons] = useState('')
+  const initialValues = {
+    email:'',
+    password:''
+  }
+  const onSubmit=values =>{
+    console.log('Form data', values)
+  }
+  const validate = values =>{
+    let errors = {}
 
-    // useEffect(()=>{
-    //     console.log(errors)
-    // },[])
-    const handleChange = (e)=>{
-        setInput({...input, [e.target.name] : e.target.value})
+    if(!values.email){
+      errors.email = 'Required'
+    } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)){
+      errors.email = 'Invalid Email Address'
     }
-    const handleSubmit = (e) =>{
-        e.preventDefault();
-        if(Object.keys(errors).length === 0){
-            console.log('submitted')
-            setInput({
-                email: "",
-                password:""
-            })
-        }
+    if(!values.password){
+      errors.password = 'Required'
+    } else if(values.password.length < 5){
+      errors.password = 'Password must be greater than 4'
     }
-    const handleValidation = () =>{
-        setErrors(Validation(input))
-        console.log(errors)
-        setActiveInput(true)
-        setActivePass(true)
+    return errors
+  }
+
+  const togglePassword = ()=>{
+    if(passwordType === 'password'){
+      setPassword('text')
     }
+    else{
+      setPassword('password')
+    }
+  }
+  // console.log(formik.errors)
   return (
-    <div>
-    <div className="formBlock">
-      <form className="form">
+    <div className='formBlock'>
+      <div className='login-page'>
         <div className='welcome'>
           <h3>Hey Admin</h3>
           <img src={hand} alt="welcome wave"/>
         </div>
         <h5 className='mb-5 mt-2'>Login to your dashboard</h5>
-        <div className='inputBox'>
-            <div className='inputClass'>
-                <input type="text" name="email" value={input.email}
-                onChange={handleChange}
-                onBlur={handleValidation}
-                placeholder='Email Address' className={(activeInput && errors.email) ? 'incorrect' : (activeInput && !errors.email) ? 'correct' : ""}/>
-                {
-                    (activeInput && errors.email) ? (
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-                      </svg>
-                    ) : (activeInput && !errors.email) ?
-                     (
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                         <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                        </svg>
-                     )
-                     : " "
-                }
-            </div>
-            {errors.email && <p className='error'>{errors.email}</p>}
-            <div className='password'>
-            <input type="password" name="password" value={input.password}
-            onChange={handleChange}
-            onBlur={handleValidation}
-            className={(activePass && errors.password) ? 'incorrect' : (activePass && !errors.password) ? 'correct' : ""} />
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21" />
-            </svg>
-            </div>
-            {errors.password && <p className='error'>{errors.password}</p>}
-        </div>
-        <h4>Forgot Password?</h4>
-        <button type='button' onClick={handleSubmit} className='w-full p-3 mt-5 rounded-lg text-white-500'>Login</button>
-      </form>
-    </div>
+        <Formik initialValues={initialValues} validate={validate}
+        onSubmit={onSubmit}
+        validateOnMount>
+          {
+            formik => {
+              console.log('Formik Props', formik)
+              return(
+                <Form>
+                  <label htmlFor='email'>
+                    <Field type="email" id="email" name='email' placeholder='Email'
+                    className={formik.touched.email && formik.errors.email ? 'border-error' : formik.touched.email && !formik.errors.email ? 'border-correct': 'null'}/>
+                    <ErrorMessage name='email' component={TextError}/>
+                    {
+                    (formik.touched.email && formik.errors.email) ? 
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg> : (formik.touched.email && !formik.errors.email) ?
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                    </svg> : ''
+                  }
+                  </label>
+                  <label htmlFor='password'>
+                    <Field type={passwordType} id="password" name='password' placeholder='Password'
+                    className={formik.touched.password && formik.errors.password ? 'border-error' : formik.touched.password && !formik.errors.password ? 'border-correct': 'null'}/>
+                    {
+                      (passwordType === 'password') ? 
+                      <img src={openEyes} onClick={togglePassword} alt="open-eyes"/> : (passwordType === 'text') ?  
+                      <img src={closedEyes} alt="closed-eyes" onClick={togglePassword}/> : ''
+                    }
+                    <ErrorMessage name='password'>
+                      {
+                        errorMsg => <div className='errors'>{errorMsg}</div>
+                      }
+                    </ErrorMessage>
+                  </label>
+                  <button type='submit' className='button w-full p-3 mt-5 rounded-lg text-white-500'
+                  disabled={!formik.isValid}>Login</button>
+                </Form>
+              )
+            }
+          }
+        </Formik>
+      </div>
     </div>
   )
 }
