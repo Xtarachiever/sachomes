@@ -12,8 +12,9 @@ function Login() {
     email:'',
     password:''
   }
-  const onSubmit=values =>{
+  const onSubmit=(values, {resetForm}) =>{
     console.log('Form data', values)
+    resetForm({values : ''})
   }
   const validate = values =>{
     let errors = {}
@@ -53,7 +54,7 @@ function Login() {
         validateOnMount>
           {
             formik => {
-              console.log('Formik Props', formik)
+              // console.log('Formik Props', formik)
               return(
                 <Form>
                   <label htmlFor='email'>
