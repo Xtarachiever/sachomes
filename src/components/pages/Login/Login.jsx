@@ -8,7 +8,6 @@ import TextError from './TextError';
 
 function Login() {
   const [passwordType,setPassword] = useState('password');
-  const [icons,setIcons] = useState('')
   const initialValues = {
     email:'',
     password:''
