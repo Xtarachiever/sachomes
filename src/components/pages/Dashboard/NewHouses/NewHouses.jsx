@@ -6,7 +6,7 @@ import file_Icon from '../../../../images/Mask.svg'
 import Button from '../../ReusableButton/Button'
 import { Link } from 'react-router-dom'
 function NewHouses() {
-    const [fileName, setFileName]= useState([])
+    const [setFileName]= useState([])
     const fileChanger=(e)=>{
         console.log(e.target.files) 
         setFileName(e.target.files)
